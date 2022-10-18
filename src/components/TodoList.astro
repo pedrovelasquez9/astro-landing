@@ -1,0 +1,13 @@
+---
+const todoData = await(
+  await fetch("https://jsonplaceholder.typicode.com/todos?userId=1")
+).json();
+---
+
+<ul>
+  {
+    todoData.map((item: any) => {
+      return <li>{item.title}</li>;
+    })
+  }
+</ul>
