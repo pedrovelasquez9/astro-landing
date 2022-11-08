@@ -1,7 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Card from "@components/Card.astro";
-import TodoList from "@components/TodoList.astro";
+import TodoList from "@components/vue/TodoList.vue";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -34,8 +34,7 @@ import TodoList from "@components/TodoList.astro";
         body="Come say hi to our amazing Discord community. ❤️"
       />
     </ul>
-    <TodoList />
-    <ul id="todo-data"></ul>
+    <TodoList client:load />
   </main>
 </Layout>
 
